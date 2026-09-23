@@ -38,6 +38,10 @@ The battery had been unused/in storage for roughly four years and would not char
 
 The enclosure was opened and the battery pack, BMS, wiring, connectors and cells were visually inspected.
 
+![Opened Stella battery pack showing the cell assembly, BMS enclosure and wiring](images/PXL_20260922_170906155.jpg)
+
+*Opened battery assembly. The cylindrical cell groups occupy the upper section; the potted BMS/electronics section and the high-current and multi-pin wiring are visible below. Photograph the original connector positions before disconnecting anything.*
+
 Stop immediately if there is evidence of:
 
 - swelling
@@ -53,11 +57,27 @@ Stop immediately if there is evidence of:
 
 For diagnosis, the cell stack was accessed on the **cell side of the BMS**.
 
+![Close view of Stella battery BMS and connections](images/PXL_20260922_171026610.MP.jpg)
+
+*Close view of the BMS area. The heavy-gauge connections carry battery current, while the multi-pin connectors carry cell-sense/control wiring. The small ON switch and exposed auxiliary/test pin are visible. Their exact electrical functions should not be assumed from appearance alone.*
+
+![Detail of the BMS switch, auxiliary pin and connectors](images/PXL_20260922_171029238.MP.jpg)
+
+*Detail of the potted electronics. This image is useful for identifying the ON switch, the single exposed pin and connector locations. During the investigation some low-voltage points measured approximately 5 V, but this does not establish that the exposed connection is UART.*
+
 This is a high-risk part of the work: an e-bike battery can deliver very high fault current. Insulated tools and protection against accidental shorts are essential.
 
 ### 4. Controlled precharge
 
 A laboratory power supply with both voltage and current limiting was used.
+
+![Laboratory power supply during controlled precharge](images/image-1790097494126.jpg)
+
+*Bench supply during the recovery process. At the moment photographed it reads approximately **29.87 V, 1.026 A and 30.65 W** and is operating in constant-current (CC) mode. This is an intermediate measurement, **not** the final pack voltage and not a recommended setpoint for other batteries.*
+
+![Temporary connections used during the experiment](images/PXL_20260923_184331340.MP~2.jpg)
+
+*Temporary laboratory connections used to access the pack during the experiment. The photograph documents what was actually done; exposed alligator clips create a significant accidental-short risk. Insulated, mechanically secure and appropriately fused temporary connections are preferable for repeat testing.*
 
 **Settings used in this specific battery recovery:**
 
@@ -75,6 +95,10 @@ The 40 V / 1.5 A values are **observations from this repair, not generic safe va
 ### 5. Stop direct charging
 
 At approximately 38 V pack voltage, the laboratory supply was disconnected.
+
+![Cell-side connection point highlighted during the investigation](images/image-1790097499296.jpg)
+
+*Connection-area reference photograph. The marked points helped distinguish the cell-stack side from the normal BMS-controlled external path. This photograph is included as a physical reference, not as a universal instruction to connect a supply to similarly positioned terminals on another battery.*
 
 Direct cell-stack charging was **not** continued to full charge.
 
@@ -166,7 +190,7 @@ A weak parallel group may temporarily recover enough to operate but still have p
 
 ## Photos and further reverse engineering
 
-The original repair photographs can be added under `images/`.
+The original repair photographs are stored under `images/` and are embedded at the relevant stages above.
 
 Future work may include:
 
